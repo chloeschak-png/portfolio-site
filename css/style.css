@@ -57,6 +57,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 input, textarea { font: inherit; }
 
 .wrap {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding-left: var(--edge);
@@ -234,6 +235,16 @@ h1, h2, h3, h4 {
   flex-direction: column;
   padding-top: 8rem;
   padding-bottom: var(--space-xl);
+}
+/* The header's logo sits at padding-left:var(--edge) from the viewport
+   edge with no max-width centering (it's a fixed, full-width bar). The
+   sitewide .wrap centers itself within --container first, which puts
+   its content past the logo's x-position on wide viewports. Scope the
+   hero's .wrap children to match the header exactly: no max-width, no
+   auto-centering margin, just the same edge padding. */
+.hero .wrap {
+  max-width: none;
+  margin: 0;
 }
 
 .hero-visual {
