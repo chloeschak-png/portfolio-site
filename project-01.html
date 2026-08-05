@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nom du projet · Chloé Schakowskoy</title>
-<meta name="description" content="Fiche projet, modèle à dupliquer pour chaque nouveau projet du portfolio." />
+<title>Appartement Mitte · Chloé Schakowskoy</title>
+<meta name="description" content="Rénovation complète d'un appartement Altbau à Berlin-Mitte : direction artistique Warm Minimal, refonte des circulations, storytelling immobilier." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -24,12 +24,32 @@
   .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
   .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
   .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
+  .project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
   .project-body p { margin-bottom: var(--space-sm); }
   .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
   .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
   .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
   .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
+
+  /* Case-study additions */
+  .section-block { margin-top: var(--space-2xl); }
+  .section-block > .eyebrow { display:block; margin-bottom: var(--space-xs); }
+  .section-block > h2 { margin-bottom: var(--space-md); font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .plans-grid figure { margin:0; }
+  .plans-grid img { width:100%; border-radius: var(--radius); background: var(--color-cream-deep); }
+  .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
+  .room-block { margin-top: var(--space-xl); }
+  .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  .before-after figure { margin:0; }
+  .before-after img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+  .before-after figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+  @media (max-width: 640px) {
+    .plans-grid, .before-after { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body class="no-js">
@@ -65,50 +85,109 @@
   <section class="wrap project-hero">
     <div class="project-hero-top" data-reveal>
       <div>
-        <p class="eyebrow">Intérieur, 2026</p>
-        <h1 class="project-hero-title">Nom du projet</h1>
+        <p class="eyebrow">Intérieur · Rénovation — Novembre 2025</p>
+        <h1 class="project-hero-title">Appartement Mitte</h1>
       </div>
       <a href="index.html#projets" class="btn">← Tous les projets</a>
     </div>
 
     <div class="project-meta-grid" data-reveal>
       <div>
-        <div class="label">Client</div>
-        <div class="value">Nom du client</div>
-      </div>
-      <div>
         <div class="label">Lieu</div>
-        <div class="value">Ville, Pays</div>
+        <div class="value">Fehrbelliner Str, Berlin-Mitte</div>
       </div>
       <div>
-        <div class="label">Année</div>
-        <div class="value">2026</div>
-      </div>
-      <div>
-        <div class="label">Rôle</div>
-        <div class="value">Conception &amp; suivi</div>
+        <div class="label">Type</div>
+        <div class="value">Rénovation, Altbau années 1920</div>
       </div>
       <div>
         <div class="label">Surface</div>
-        <div class="value">XX m²</div>
+        <div class="value">69,9 m²</div>
+      </div>
+      <div>
+        <div class="label">Rôle</div>
+        <div class="value">Architecture d'intérieur & direction artistique</div>
+      </div>
+      <div>
+        <div class="label">Direction artistique</div>
+        <div class="value">Modern Berlin — Warm Minimal</div>
       </div>
     </div>
 
-    <div class="project-cover placeholder-fill" data-reveal style="min-height:320px;">
-      Photo principale à venir
+    <div class="project-cover" data-reveal>
+      <img src="assets/projects/appartement-mitte/hero.jpg" alt="Salon rénové de l'Appartement Mitte, style Warm Minimal" />
     </div>
 
     <div class="project-body" data-reveal>
-      <p><strong>Le contexte.</strong> Décris ici la demande initiale du client : le lieu, les contraintes, l'intention de départ. Deux à trois phrases suffisent pour poser le décor.</p>
-      <p><strong>L'intention.</strong> Explique le parti pris créatif : quelle ambiance, quelles références, quels choix de matières ou de formes ont guidé le projet.</p>
-      <p><strong>Le résultat.</strong> Termine en présentant ce qui a été livré et l'effet recherché sur ceux qui vivent ou utilisent l'espace / l'objet.</p>
+      <p><strong>Le contexte.</strong> Un appartement de 69,9 m² au 2ᵉ étage d'un immeuble Altbau des années 1920, à Berlin-Mitte. De vrais atouts : plafonds à 3,20 m, une exposition ouest offrant une belle lumière de fin de journée, un balcon avec vue dégagée. Mais une distribution en « peigne » qui dessert mal l'appartement : un long couloir aveugle en tunnel, une cuisine mal reliée aux pièces de vie, et des sols fragmentés par une succession de matériaux différents d'une pièce à l'autre.</p>
+      <p><strong>L'intention.</strong> Installer une direction artistique « Modern Berlin » / Warm Minimal : un minimalisme chaleureux, des lignes épurées, une atmosphère premium proche du quiet luxury — matières brutes et texturées (laine bouclée, bois), verrière en verre strié, chaise Wassily en contrepoint métallique, éclairage indirect chaud à 2700K.</p>
+      <p><strong>La stratégie.</strong> Un sol unique et continu déployé sur les 70 m², qui met fin au mélange carrelage / moquette / stratifié. Des ouvertures vitrées percées dans le couloir pour casser l'effet tunnel et faire entrer la lumière ouest jusqu'au cœur du plan. Des rangements sur-mesure intégrés au couloir pour récupérer les mètres carrés jusque-là perdus.</p>
+      <p><strong>Le résultat.</strong> Une approche à la croisée du design spatial, de l'image et du marketing : des espaces pensés pour être vécus autant que perçus — photographiés, filmés — avec une attention particulière portée à l'évolution de la lumière naturelle au fil de la journée.</p>
     </div>
 
-    <div class="project-gallery" data-reveal>
-      <div class="placeholder-fill">Photo 02</div>
-      <div class="placeholder-fill">Photo 03</div>
-      <div class="placeholder-fill">Photo 04</div>
-      <div class="placeholder-fill">Photo 05</div>
+    <div class="section-block" data-reveal>
+      <span class="eyebrow">Conception</span>
+      <h2>Avant / après le plan</h2>
+      <div class="plans-grid">
+        <figure>
+          <img src="assets/projects/appartement-mitte/plan-existant.jpg" alt="Plan existant annoté, distribution en peigne et couloir tunnel" />
+          <figcaption>État existant — distribution en peigne, couloir aveugle</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/appartement-mitte/plan-projet.jpg" alt="Plan projet, ouvertures vitrées et rangements sur-mesure" />
+          <figcaption>Plan projet — ouvertures vitrées, sol continu, rangements sur-mesure</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="section-block" data-reveal>
+      <span class="eyebrow">Résultat final</span>
+      <h2>Pièce par pièce</h2>
+
+      <div class="room-block">
+        <h3>Salon</h3>
+        <p>Quiet luxury : verrière en verre strié pour délimiter sans cloisonner, chaise Wassily en contraste métallique, éclairage indirect chaud à 2700K.</p>
+        <div class="before-after">
+          <figure>
+            <img src="assets/projects/appartement-mitte/salon-avant.jpg" alt="Salon avant travaux" />
+            <figcaption>Avant</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/projects/appartement-mitte/salon-apres.jpg" alt="Salon après travaux, style Warm Minimal" />
+            <figcaption>Après</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="room-block">
+        <h3>Bureau / couloir</h3>
+        <p>Bureau suspendu en chêne, claustra en verre strié à cadre noir, laine bouclée et tapis tufté, végétation sculpturale — l'ancien couloir tunnel devient un espace de vie à part entière.</p>
+        <div class="before-after">
+          <figure>
+            <img src="assets/projects/appartement-mitte/bureau-avant.jpg" alt="Couloir avant travaux" />
+            <figcaption>Avant</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/projects/appartement-mitte/bureau-apres.jpg" alt="Bureau et couloir après travaux avec claustra en verre strié" />
+            <figcaption>Après</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="room-block">
+        <h3>Chambre</h3>
+        <p>Palette monochrome — laine bouclée, lin lavé, parquet chevron. Rangements en chêne et verre strié exploitant les 3,20 m sous plafond, appliques murales à 2700K, ficus et toile abstraite.</p>
+        <div class="before-after">
+          <figure>
+            <img src="assets/projects/appartement-mitte/chambre-avant.jpg" alt="Chambre avant travaux" />
+            <figcaption>Avant</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/projects/appartement-mitte/chambre-apres.jpg" alt="Chambre après travaux, palette monochrome" />
+            <figcaption>Après</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
 
     <div class="project-nav" data-reveal>
