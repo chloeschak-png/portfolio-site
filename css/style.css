@@ -28,6 +28,11 @@
   --radius: 6px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Real height of the fixed header, kept in sync by js/script.js via
+     header.offsetHeight (measured at the unscrolled/page-load state).
+     Fallback below covers no-js: padding 1.4rem*2 + ~52px button row. */
+  --header-h: 97px;
 }
 
 /* ==========================================================================
@@ -233,7 +238,10 @@ h1, h2, h3, h4 {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 8rem;
+  /* Matches the fixed header's real rendered height (kept in sync by
+     js/script.js) so the cover image sits flush right under the nav
+     bar, with no gap and no overlap. */
+  padding-top: var(--header-h);
   padding-bottom: var(--space-xl);
 }
 /* The header's logo sits at padding-left:var(--edge) from the viewport
@@ -253,14 +261,12 @@ h1, h2, h3, h4 {
      with both edges -- no vw/calc trick needed, and no scrollbar-vs-vw
      rounding discrepancy to worry about. */
   width: 100%;
-  margin: var(--space-lg) 0;
+  margin: 0 0 var(--space-lg);
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--color-cream-deep);
 }
 .hero-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.hero-eyebrow { margin-bottom: 0; }
 
 .hero-meta {
   margin-top: 0;

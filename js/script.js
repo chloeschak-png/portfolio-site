@@ -13,6 +13,19 @@ onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
 /* ---------------------------------------------------------------
+   Keep --header-h in sync with the fixed header's real height, so
+   the hero's cover image sits flush under it with no gap/overlap.
+   Measured at load (always unscrolled, i.e. the taller padding
+   state) and on resize.
+--------------------------------------------------------------- */
+const syncHeaderHeight = () => {
+  if (!header) return;
+  document.documentElement.style.setProperty("--header-h", `${header.offsetHeight}px`);
+};
+syncHeaderHeight();
+window.addEventListener("resize", syncHeaderHeight);
+
+/* ---------------------------------------------------------------
    Mobile nav toggle
 --------------------------------------------------------------- */
 const navToggle = document.getElementById("nav-toggle");
