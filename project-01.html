@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nom du projet · Chloé Schakowskoy</title>
+<meta name="description" content="Fiche projet, modèle à dupliquer pour chaque nouveau projet du portfolio." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/favicon/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  .project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
+  .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
+  .project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
+  .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
+  .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
+  .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
+  .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
+  .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
+  .project-body p { margin-bottom: var(--space-sm); }
+  .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+  .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
+  .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
+  .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
+</style>
+</head>
+<body class="no-js">
+
+<header class="site-header" id="site-header">
+  <a href="index.html" class="logo">
+    <img src="assets/logo/logo.png" alt="Logo Chloé Schakowskoy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+    <span class="logo-fallback" style="display:none;"></span>
+    <span>Chloé Schakowskoy</span>
+  </a>
+  <nav class="nav-desktop" aria-label="Navigation principale">
+    <a href="index.html#projets">Projets</a>
+    <a href="index.html#apropos">À propos</a>
+    <a href="index.html#parcours">Parcours</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="index.html#contact" class="btn">Me contacter</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-mobile" id="nav-mobile" aria-label="Navigation mobile">
+  <a href="index.html#projets">Projets</a>
+  <a href="index.html#apropos">À propos</a>
+  <a href="index.html#parcours">Parcours</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<main>
+  <section class="wrap project-hero">
+    <div class="project-hero-top" data-reveal>
+      <div>
+        <p class="eyebrow">Intérieur, 2026</p>
+        <h1 class="project-hero-title">Nom du projet</h1>
+      </div>
+      <a href="index.html#projets" class="btn">← Tous les projets</a>
+    </div>
+
+    <div class="project-meta-grid" data-reveal>
+      <div>
+        <div class="label">Client</div>
+        <div class="value">Nom du client</div>
+      </div>
+      <div>
+        <div class="label">Lieu</div>
+        <div class="value">Ville, Pays</div>
+      </div>
+      <div>
+        <div class="label">Année</div>
+        <div class="value">2026</div>
+      </div>
+      <div>
+        <div class="label">Rôle</div>
+        <div class="value">Conception &amp; suivi</div>
+      </div>
+      <div>
+        <div class="label">Surface</div>
+        <div class="value">XX m²</div>
+      </div>
+    </div>
+
+    <div class="project-cover placeholder-fill" data-reveal style="min-height:320px;">
+      Photo principale à venir
+    </div>
+
+    <div class="project-body" data-reveal>
+      <p><strong>Le contexte.</strong> Décris ici la demande initiale du client : le lieu, les contraintes, l'intention de départ. Deux à trois phrases suffisent pour poser le décor.</p>
+      <p><strong>L'intention.</strong> Explique le parti pris créatif : quelle ambiance, quelles références, quels choix de matières ou de formes ont guidé le projet.</p>
+      <p><strong>Le résultat.</strong> Termine en présentant ce qui a été livré et l'effet recherché sur ceux qui vivent ou utilisent l'espace / l'objet.</p>
+    </div>
+
+    <div class="project-gallery" data-reveal>
+      <div class="placeholder-fill">Photo 02</div>
+      <div class="placeholder-fill">Photo 03</div>
+      <div class="placeholder-fill">Photo 04</div>
+      <div class="placeholder-fill">Photo 05</div>
+    </div>
+
+    <div class="project-nav" data-reveal>
+      <a href="project-06.html" class="link-arrow">&larr; Projet précédent</a>
+      <a href="project-02.html" class="btn btn--solid">Projet suivant &rarr;</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; width:100%;">
+    <span>© 2026 Chloé Schakowskoy. Tous droits réservés.</span>
+    <span><a href="index.html">Retour à l'accueil</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
