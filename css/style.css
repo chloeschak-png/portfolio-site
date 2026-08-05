@@ -512,6 +512,16 @@ h1, h2, h3, h4 {
   white-space: nowrap;
 }
 
+/* Project entries in the Parcours timeline read as projects, not CV rows */
+.timeline-item--project {
+  align-items: center;
+  transition: background 0.2s var(--ease-out);
+}
+.timeline-item--project:hover { background: var(--color-cream-deep); }
+.timeline-item--project .timeline-role { transition: color 0.2s var(--ease-out); }
+.timeline-item--project:hover .timeline-role { color: var(--color-terracotta); }
+.timeline-type--project { color: var(--color-terracotta); font-weight: 700; }
+
 /* ==========================================================================
    Project case-study numeral (shared across project-0X.html pages)
    ========================================================================== */
