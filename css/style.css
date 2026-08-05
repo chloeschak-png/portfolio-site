@@ -416,20 +416,43 @@ h1, h2, h3, h4 {
 .project-card:hover .project-card-arrow { opacity: 1; transform: translate(0, 0); }
 
 /* ==========================================================================
-   Process
+   Process — horizontal frise (stacks to a vertical timeline on mobile)
    ========================================================================== */
-.process-list { border-top: 1px solid var(--color-line); }
-.process-item {
+.process-timeline {
+  position: relative;
   display: grid;
-  grid-template-columns: 96px 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
-  align-items: baseline;
-  padding: var(--space-lg) 0;
-  border-bottom: 1px solid var(--color-line);
+  padding-top: var(--space-xs);
 }
-.process-index { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1; color: var(--color-terracotta); }
-.process-title { font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 600; }
-.process-text { color: var(--color-muted); max-width: 42ch; }
+.process-track {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-line);
+}
+.process-step { position: relative; }
+.process-marker {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  color: var(--color-cream);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  margin-bottom: var(--space-sm);
+  flex-shrink: 0;
+}
+.process-step-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.3rem; }
+.process-step-text { font-size: 0.88rem; color: var(--color-muted); max-width: 24ch; }
 
 /* ==========================================================================
    About
@@ -586,7 +609,9 @@ h1, h2, h3, h4 {
   .hero-visual { aspect-ratio: 4 / 3; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .process-item { grid-template-columns: 64px 1fr; }
-  .process-text { grid-column: 2; }
+  .process-timeline { grid-template-columns: 1fr; gap: var(--space-lg); padding-top: 0; }
+  .process-track { top: 0; bottom: 0; left: 14px; right: auto; width: 1px; height: auto; }
+  .process-step { display: flex; align-items: flex-start; gap: var(--space-sm); }
+  .process-marker { margin-bottom: 0; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
 }
