@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nom du projet · Chloé Schakowskoy</title>
-<meta name="description" content="Fiche projet, modèle à dupliquer pour chaque nouveau projet du portfolio." />
+<title>Modern Berlin Micro-Living Apartment · Chloé Schakowskoy</title>
+<meta name="description" content="Studio de 34,46 m² à Charlottenburg, Berlin : optimisation micro-living, direction artistique Warm Minimal, mobilier sur-mesure." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -24,12 +24,45 @@
   .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
   .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
   .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
+  .project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
   .project-body p { margin-bottom: var(--space-sm); }
   .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
   .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
   .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
   .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
+
+  /* Case-study additions */
+  .section-block { margin-top: var(--space-2xl); }
+  .section-block > .eyebrow { display:block; margin-bottom: var(--space-xs); }
+  .section-block > h2 { margin-bottom: var(--space-md); font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+  .plans-grid figure { margin:0; }
+  .plans-grid img { width:100%; border-radius: var(--radius); }
+  .light-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
+  .light-grid figure { margin:0; }
+  .light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+  .light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+  .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
+  .room-block { margin-top: var(--space-xl); }
+  .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  .before-after figure { margin:0; }
+  .before-after img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+  .before-after figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+  .swatch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-sm); }
+  .swatch-grid figure { margin:0; }
+  .swatch-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 2/3; object-fit: cover; }
+  .swatch-grid figcaption { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color: var(--color-muted); margin-top:0.5rem; text-align:center; }
+  .moodboard-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-md); }
+  .moodboard-photos figure { margin:0; }
+  .moodboard-photos img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+  .moodboard-photos figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+  @media (max-width: 640px) {
+    .plans-grid, .before-after, .light-grid, .moodboard-photos { grid-template-columns: 1fr; }
+    .swatch-grid { grid-template-columns: repeat(3, 1fr); }
+  }
 </style>
 </head>
 <body class="no-js">
@@ -65,50 +98,94 @@
   <section class="wrap project-hero">
     <div class="project-hero-top" data-reveal>
       <div>
-        <p class="eyebrow">Produit, 2025</p>
-        <h1 class="project-hero-title">Nom du projet</h1>
+        <span class="project-index-num">02</span>
+        <p class="eyebrow">Charlottenburg · Intérieur, micro-living, mai 2026</p>
+        <h1 class="project-hero-title">Modern Berlin Micro-Living Apartment</h1>
       </div>
       <a href="index.html#projets" class="btn">← Tous les projets</a>
     </div>
 
     <div class="project-meta-grid" data-reveal>
       <div>
-        <div class="label">Client</div>
-        <div class="value">Nom du client</div>
-      </div>
-      <div>
         <div class="label">Lieu</div>
-        <div class="value">Ville, Pays</div>
+        <div class="value">Galvanistr. 3, Charlottenburg, Berlin</div>
       </div>
       <div>
-        <div class="label">Année</div>
-        <div class="value">2025</div>
-      </div>
-      <div>
-        <div class="label">Rôle</div>
-        <div class="value">Conception &amp; suivi</div>
+        <div class="label">Type</div>
+        <div class="value">Studio, rénovation légère micro-living</div>
       </div>
       <div>
         <div class="label">Surface</div>
-        <div class="value">XX m²</div>
+        <div class="value">34,46 m²</div>
       </div>
     </div>
 
-    <div class="project-cover placeholder-fill" data-reveal style="min-height:320px;">
-      Photo principale à venir
+    <div class="project-cover" data-reveal>
+      <img src="assets/projects/micro-living-charlottenburg/hero.jpg" alt="Vue isométrique du studio de Charlottenburg, mezzanine et coin bureau" />
     </div>
 
     <div class="project-body" data-reveal>
-      <p><strong>Le contexte.</strong> Décris ici la demande initiale du client : le lieu, les contraintes, l'intention de départ. Deux à trois phrases suffisent pour poser le décor.</p>
-      <p><strong>L'intention.</strong> Explique le parti pris créatif : quelle ambiance, quelles références, quels choix de matières ou de formes ont guidé le projet.</p>
-      <p><strong>Le résultat.</strong> Termine en présentant ce qui a été livré et l'effet recherché sur ceux qui vivent ou utilisent l'espace / l'objet.</p>
+      <p><strong>Le contexte.</strong> Un studio de 34,46 m² dans un immeuble résidentiel modernisé de Charlottenburg, à deux pas du Landwehrkanal, de la Spree et de la TU Berlin. Le client, Jonas Keller, étudiant en architecture, en a fait son espace pour vivre, travailler et créer. L'entrée se fait directement dans la pièce principale, sans couloir ni sas tampon, ce qui pose d'emblée la question de la lecture des usages.</p>
+      <p><strong>L'intention.</strong> Une direction artistique « Warm Minimal » : matières naturelles, tons clairs, lignes nettes. L'objectif n'est pas une transformation structurelle, les murs périphériques sont porteurs et ne peuvent pas être touchés, mais une relecture spatiale : fluidifier les usages et améliorer la perception de l'espace dans une surface contrainte.</p>
+      <p><strong>La stratégie.</strong> Optimiser chaque m² disponible, multiplier le mobilier sur-mesure discret et les rangements intégrés, clarifier trois zones dans un même volume : vie, travail, repos. La pièce principale de 23,34 m² concentre ces usages, tandis que la zone de transition (4,16 m² et 2,03 m²) et la salle de bain de 4,93 m² restent des espaces de service bien identifiés. L'unique fenêtre, orientée nord-est, offre une belle lumière de matin qu'il faut diffuser avec soin vers les zones les plus reculées, couloir et cuisine.</p>
+      <p><strong>Le résultat.</strong> Une rénovation légère (budget 15 000 à 30 000 €) portée sur l'optimisation de la surface, le mobilier sur-mesure, la reprise des sols et des peintures, et le travail de la lumière artificielle, plutôt que sur le gros œuvre. Un studio qui gagne en fluidité d'usage sans gagner un mètre carré supplémentaire.</p>
     </div>
 
-    <div class="project-gallery" data-reveal>
-      <div class="placeholder-fill">Photo 02</div>
-      <div class="placeholder-fill">Photo 03</div>
-      <div class="placeholder-fill">Photo 04</div>
-      <div class="placeholder-fill">Photo 05</div>
+    <div class="section-block" data-reveal>
+      <span class="eyebrow">Conception</span>
+      <h2>Le plan</h2>
+      <div class="plans-grid">
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/plan.png" alt="Plan annoté du studio : pièce principale 23,34 m², zone de transition, salle de bain 4,93 m²" />
+          <figcaption>Plan projet : pièce de vie 23,34 m², zone de transition 4,16 m² et 2,03 m², salle de bain 4,93 m²</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/hero.jpg" alt="Vue isométrique du studio, mezzanine, banquette et bureau" />
+          <figcaption>Vue isométrique : mezzanine, banquette intégrée, coin bureau</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="section-block" data-reveal>
+      <span class="eyebrow">Processus créatif</span>
+      <h2>Moodboard</h2>
+      <p style="max-width:70ch; color:var(--color-muted); margin-bottom: var(--space-md);">Une palette Warm Minimal construite autour de tons clairs et naturels, ponctuée d'une touche de jaune pastel et de vert de brume pour réchauffer le blanc cassé dominant.</p>
+      <div class="swatch-grid">
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-antique-white.jpg" alt="Pantone 11-0105 Antique White" />
+          <figcaption>Antique White</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-griffin.jpg" alt="Pantone 17-5102 Griffin" />
+          <figcaption>Griffin</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-campsite.jpg" alt="Pantone 18-0323 Campsite" />
+          <figcaption>Campsite</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-pastel-yellow.jpg" alt="Pantone 11-0616 Pastel Yellow" />
+          <figcaption>Pastel Yellow</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-fog-green.jpg" alt="Pantone 13-0210 Fog Green" />
+          <figcaption>Fog Green</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/swatch-moonstruck.jpg" alt="Pantone 14-4500 Moonstruck" />
+          <figcaption>Moonstruck</figcaption>
+        </figure>
+      </div>
+      <div class="moodboard-photos">
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/moodboard-bureau.jpg" alt="Référence d'ambiance : bureau intégré devant une fenêtre" />
+          <figcaption>Référence : bureau intégré, lumière naturelle</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/micro-living-charlottenburg/moodboard-parquet.jpg" alt="Référence de matière : parquet chevron en bois clair" />
+          <figcaption>Référence matière : parquet chevron, bois clair</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="project-nav" data-reveal>
