@@ -8,10 +8,21 @@
   --color-terracotta: #b5502f;
   --color-terracotta-deep: #8f3d22;
   --color-terracotta-soft: #eac9b4;
+  /* Darker terracotta reserved for SMALL text usages of the accent color
+     (e.g. small uppercase labels). --color-terracotta itself only hits
+     ~4.37:1 on --color-cream / ~3.86:1 on --color-cream-deep, which
+     clears WCAG AA (3:1) for large text (the big project numerals) but
+     fails AA (4.5:1) for small text. This variant clears 4.5:1 on both
+     cream backgrounds while staying in the same terracotta family. */
+  --color-terracotta-text: #9c4326;
   --color-white: #ffffff;
   --color-line: rgba(28, 27, 31, 0.12);
   --color-line-strong: rgba(28, 27, 31, 0.22);
-  --color-muted: rgba(28, 27, 31, 0.56);
+  /* 0.64 alpha keeps this at ~4.62:1 on --color-cream-deep (the lower-
+     contrast of the two backgrounds this is used on) and ~4.86:1 on
+     --color-cream, clearing WCAG AA (4.5:1) for normal-size text on
+     both. (Previously 0.56 alpha => ~3.66-3.80:1, failing AA.) */
+  --color-muted: rgba(28, 27, 31, 0.64);
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Archivo", sans-serif;
@@ -290,30 +301,26 @@ h1, h2, h3, h4 {
   align-self: center;
   margin: var(--space-md) 0 0;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 50%;
   color: var(--color-muted);
-  transition: color 0.2s var(--ease-out);
+  transition: color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
 }
-.scroll-cue:hover { color: var(--color-ink); }
-.scroll-cue:hover .scroll-cue-line { background: var(--color-ink); }
-.scroll-cue-line {
-  width: 30px;
-  height: 1px;
-  background: var(--color-line-strong);
-  animation: scrollcue 2.2s ease-in-out infinite;
-  transform-origin: left;
+.scroll-cue:hover { color: var(--color-ink); border-color: var(--color-ink); }
+.scroll-cue-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scrollcue-pulse 2.4s ease-in-out infinite;
 }
-@keyframes scrollcue {
-  0% { transform: scaleX(0); opacity: 0; }
-  40% { transform: scaleX(1); opacity: 1; }
-  100% { transform: scaleX(1); opacity: 0; }
+.scroll-cue-icon svg { width: 14px; height: 14px; display: block; }
+@keyframes scrollcue-pulse {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(4px); opacity: 1; }
 }
 
 /* ==========================================================================
@@ -413,7 +420,7 @@ h1, h2, h3, h4 {
 .project-card-arrow {
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--color-terracotta);
+  color: var(--color-terracotta-text);
   opacity: 0;
   transform: translate(-4px, 4px);
   transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
@@ -525,8 +532,8 @@ h1, h2, h3, h4 {
 }
 .timeline-item--project:hover { background: var(--color-cream-deep); }
 .timeline-item--project .timeline-role { transition: color 0.2s var(--ease-out); }
-.timeline-item--project:hover .timeline-role { color: var(--color-terracotta); }
-.timeline-type--project { color: var(--color-terracotta); font-weight: 700; }
+.timeline-item--project:hover .timeline-role { color: var(--color-terracotta-text); }
+.timeline-type--project { color: var(--color-terracotta-text); font-weight: 700; }
 
 /* ==========================================================================
    Project case-study numeral (shared across project-0X.html pages)
@@ -539,6 +546,67 @@ h1, h2, h3, h4 {
   line-height: 1;
   color: var(--color-terracotta);
   margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Case-study components — shared across project-0X.html pages
+   (moved out of per-page inline <style> blocks so project-01/02/etc. stay
+   in sync instead of silently drifting from each other)
+   ========================================================================== */
+.project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
+.project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
+.project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
+.project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
+.project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
+.project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
+.project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
+.project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
+.project-body p { margin-bottom: var(--space-sm); }
+.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
+.placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
+.project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
+.project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
+
+/* Case-study additions */
+.section-block { margin-top: var(--space-2xl); }
+.section-block > .eyebrow { display:block; margin-bottom: var(--space-xs); }
+.section-block > h2 { margin-bottom: var(--space-md); font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+.plans-grid figure { margin:0; }
+.plans-grid img { width:100%; border-radius: var(--radius); }
+.light-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
+.light-grid figure { margin:0; }
+.light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+.light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+.plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
+.room-block { margin-top: var(--space-xl); }
+.room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
+.room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
+.before-after { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+.before-after figure { margin:0; }
+.before-after img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+.before-after figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
+.swatch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-sm); }
+.swatch-grid figure { margin:0; }
+.swatch-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 2/3; object-fit: cover; }
+.swatch-grid figcaption { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color: var(--color-muted); margin-top:0.5rem; text-align:center; }
+.moodboard-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 130px;
+  grid-auto-flow: dense;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.moodboard-collage figure { margin:0; padding:0; position: relative; overflow: hidden; border-radius: var(--radius); background: var(--color-cream-deep); line-height:0; font-size:0; }
+.moodboard-collage img { position:absolute; inset:-1px; width:calc(100% + 2px); height:calc(100% + 2px); object-fit: cover; display:block; margin:0; padding:0; border:0; }
+.moodboard-collage .item-feature { grid-column: span 2; grid-row: span 2; }
+.moodboard-collage .item-tall { grid-column: span 1; grid-row: span 2; }
+@media (max-width: 640px) {
+  .plans-grid, .before-after, .light-grid { grid-template-columns: 1fr; }
+  .swatch-grid { grid-template-columns: repeat(3, 1fr); }
+  .moodboard-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
 }
 
 /* ==========================================================================

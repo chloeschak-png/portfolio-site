@@ -16,63 +16,6 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/favicon/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<style>
-  .project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
-  .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
-  .project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
-  .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
-  .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
-  .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
-  .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
-  .project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
-  .project-body p { margin-bottom: var(--space-sm); }
-  .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
-  .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
-  .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
-  .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
-
-  /* Case-study additions */
-  .section-block { margin-top: var(--space-2xl); }
-  .section-block > .eyebrow { display:block; margin-bottom: var(--space-xs); }
-  .section-block > h2 { margin-bottom: var(--space-md); font-size: clamp(1.6rem, 3vw, 2.2rem); }
-  .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
-  .plans-grid figure { margin:0; }
-  .plans-grid img { width:100%; border-radius: var(--radius); }
-  .light-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
-  .light-grid figure { margin:0; }
-  .light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
-  .light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
-  .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
-  .room-block { margin-top: var(--space-xl); }
-  .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
-  .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
-  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
-  .before-after figure { margin:0; }
-  .before-after img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
-  .before-after figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
-  .swatch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-sm); }
-  .swatch-grid figure { margin:0; }
-  .swatch-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 2/3; object-fit: cover; }
-  .swatch-grid figcaption { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.06em; color: var(--color-muted); margin-top:0.5rem; text-align:center; }
-  .moodboard-collage {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: 130px;
-    grid-auto-flow: dense;
-    gap: var(--space-sm);
-    margin-top: var(--space-md);
-  }
-  .moodboard-collage figure { margin:0; padding:0; position: relative; overflow: hidden; border-radius: var(--radius); background: var(--color-cream-deep); line-height:0; font-size:0; }
-  .moodboard-collage img { position:absolute; inset:-1px; width:calc(100% + 2px); height:calc(100% + 2px); object-fit: cover; display:block; margin:0; padding:0; border:0; }
-  .moodboard-collage .item-feature { grid-column: span 2; grid-row: span 2; }
-  .moodboard-collage .item-tall { grid-column: span 1; grid-row: span 2; }
-  @media (max-width: 640px) {
-    .plans-grid, .before-after, .light-grid { grid-template-columns: 1fr; }
-    .swatch-grid { grid-template-columns: repeat(3, 1fr); }
-    .moodboard-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
-  }
-</style>
 </head>
 <body class="no-js">
 
@@ -145,11 +88,11 @@
       <h2>Le plan</h2>
       <div class="plans-grid">
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/plan.png" alt="Plan annoté du studio : pièce principale 23,34 m², zone de transition, salle de bain 4,93 m²" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/plan.png" alt="Plan annoté du studio : pièce principale 23,34 m², zone de transition, salle de bain 4,93 m²" />
           <figcaption>Plan projet : pièce de vie 23,34 m², zone de transition 4,16 m² et 2,03 m², salle de bain 4,93 m²</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/hero.jpg" alt="Vue isométrique du studio, mezzanine, banquette et bureau" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/hero.jpg" alt="Vue isométrique du studio, mezzanine, banquette et bureau" />
           <figcaption>Vue isométrique : mezzanine, banquette intégrée, coin bureau</figcaption>
         </figure>
       </div>
@@ -161,64 +104,64 @@
       <p style="max-width:70ch; color:var(--color-muted); margin-bottom: var(--space-md);">Une palette Warm Minimal construite autour de tons clairs et naturels, ponctuée d'une touche de jaune pastel et de vert de brume pour réchauffer le blanc cassé dominant.</p>
       <div class="swatch-grid">
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-antique-white.jpg" alt="Pantone 11-0105 Antique White" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-antique-white.jpg" alt="Pantone 11-0105 Antique White" />
           <figcaption>Antique White</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-griffin.jpg" alt="Pantone 17-5102 Griffin" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-griffin.jpg" alt="Pantone 17-5102 Griffin" />
           <figcaption>Griffin</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-campsite.jpg" alt="Pantone 18-0323 Campsite" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-campsite.jpg" alt="Pantone 18-0323 Campsite" />
           <figcaption>Campsite</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-pastel-yellow.jpg" alt="Pantone 11-0616 Pastel Yellow" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-pastel-yellow.jpg" alt="Pantone 11-0616 Pastel Yellow" />
           <figcaption>Pastel Yellow</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-fog-green.jpg" alt="Pantone 13-0210 Fog Green" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-fog-green.jpg" alt="Pantone 13-0210 Fog Green" />
           <figcaption>Fog Green</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/swatch-moonstruck.jpg" alt="Pantone 14-4500 Moonstruck" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/swatch-moonstruck.jpg" alt="Pantone 14-4500 Moonstruck" />
           <figcaption>Moonstruck</figcaption>
         </figure>
       </div>
       <p style="max-width:70ch; color:var(--color-muted); margin-bottom: var(--space-md);">Les références et matières qui ont nourri le projet : mobilier gain de place, ambiances de travail, bois, enduits et détails de finition.</p>
       <div class="moodboard-collage">
         <figure class="item-feature">
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-lit-escamotable.jpg" alt="Référence de mobilier : lit escamotable et banquette intégrée, version grise" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-lit-escamotable.jpg" alt="Référence de mobilier : lit escamotable et banquette intégrée, version grise" />
         </figure>
         <figure class="item-feature">
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-bureau-fenetre.jpg" alt="Référence d'ambiance : bureau d'architecte devant une fenêtre" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-bureau-fenetre.jpg" alt="Référence d'ambiance : bureau d'architecte devant une fenêtre" />
         </figure>
         <figure class="item-tall">
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-suspensions.jpg" alt="Référence de luminaire : suspensions rondes en papier et verre devant une façade vitrée" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-suspensions.jpg" alt="Référence de luminaire : suspensions rondes en papier et verre devant une façade vitrée" />
         </figure>
         <figure class="item-tall">
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-lit-escamotable-blanc.jpg" alt="Référence de mobilier : lit escamotable blanc intégré avec bibliothèques et portes vitrées" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-lit-escamotable-blanc.jpg" alt="Référence de mobilier : lit escamotable blanc intégré avec bibliothèques et portes vitrées" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-parquet-chevron.jpg" alt="Texture de parquet en chêne posé à chevron" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-parquet-chevron.jpg" alt="Texture de parquet en chêne posé à chevron" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-bois.jpg" alt="Texture de bois, planches de chêne droites" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-bois.jpg" alt="Texture de bois, planches de chêne droites" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-texture-enduit.jpg" alt="Échantillon de texture d'enduit taloché gris et blanc" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-texture-enduit.jpg" alt="Échantillon de texture d'enduit taloché gris et blanc" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-soie.jpg" alt="Échantillon de soie drapée couleur crème" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-soie.jpg" alt="Échantillon de soie drapée couleur crème" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-graphique.jpg" alt="Référence graphique abstraite en camaïeu de bleu cobalt et charbon" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-graphique.jpg" alt="Référence graphique abstraite en camaïeu de bleu cobalt et charbon" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-interrupteur.jpg" alt="Détail d'un interrupteur double en finition acier brossé" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-interrupteur.jpg" alt="Détail d'un interrupteur double en finition acier brossé" />
         </figure>
         <figure>
-          <img src="assets/projects/micro-living-charlottenburg/moodboard-patères.jpg" alt="Référence d'accessoire : sac en tote suspendu à des patères murales rondes" />
+          <img loading="lazy" src="assets/projects/micro-living-charlottenburg/moodboard-patères.jpg" alt="Référence d'accessoire : sac en tote suspendu à des patères murales rondes" />
         </figure>
       </div>
     </div>

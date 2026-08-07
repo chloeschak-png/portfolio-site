@@ -16,45 +16,6 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/favicon/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<style>
-  .project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
-  .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
-  .project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
-  .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
-  .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
-  .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
-  .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
-  .project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
-  .project-body p { margin-bottom: var(--space-sm); }
-  .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
-  .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
-  .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
-  .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
-
-  /* Case-study additions */
-  .section-block { margin-top: var(--space-2xl); }
-  .section-block > .eyebrow { display:block; margin-bottom: var(--space-xs); }
-  .section-block > h2 { margin-bottom: var(--space-md); font-size: clamp(1.6rem, 3vw, 2.2rem); }
-  .plans-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
-  .plans-grid figure { margin:0; }
-  .plans-grid img { width:100%; border-radius: var(--radius); }
-  .light-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
-  .light-grid figure { margin:0; }
-  .light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
-  .light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
-  .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
-  .room-block { margin-top: var(--space-xl); }
-  .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
-  .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
-  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
-  .before-after figure { margin:0; }
-  .before-after img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
-  .before-after figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
-  @media (max-width: 640px) {
-    .plans-grid, .before-after, .light-grid { grid-template-columns: 1fr; }
-  }
-</style>
 </head>
 <body class="no-js">
 
@@ -127,11 +88,11 @@
       <h2>Avant / après le plan</h2>
       <div class="plans-grid">
         <figure>
-          <img src="assets/projects/appartement-mitte/plan-existant.png" alt="Plan existant annoté, distribution en peigne et couloir tunnel" />
+          <img loading="lazy" src="assets/projects/appartement-mitte/plan-existant.png" alt="Plan existant annoté, distribution en peigne et couloir tunnel" />
           <figcaption>État existant : distribution en peigne, couloir aveugle</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/appartement-mitte/plan-projet.png" alt="Plan projet, ouvertures vitrées et rangements sur-mesure" />
+          <img loading="lazy" src="assets/projects/appartement-mitte/plan-projet.png" alt="Plan projet, ouvertures vitrées et rangements sur-mesure" />
           <figcaption>Plan projet : ouvertures vitrées, sol continu, rangements sur-mesure</figcaption>
         </figure>
       </div>
@@ -146,11 +107,11 @@
         <p>Quiet luxury : verrière en verre strié pour délimiter sans cloisonner, chaise Wassily en contraste métallique, éclairage indirect chaud à 2700K.</p>
         <div class="before-after">
           <figure>
-            <img src="assets/projects/appartement-mitte/salon-avant.jpg" alt="Salon avant travaux" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/salon-avant.jpg" alt="Salon avant travaux" />
             <figcaption>Avant</figcaption>
           </figure>
           <figure>
-            <img src="assets/projects/appartement-mitte/salon-apres.jpg" alt="Salon après travaux, style Warm Minimal" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/salon-apres.jpg" alt="Salon après travaux, style Warm Minimal" />
             <figcaption>Après</figcaption>
           </figure>
         </div>
@@ -161,11 +122,11 @@
         <p>Bureau suspendu en chêne, claustra en verre strié à cadre noir, laine bouclée et tapis tufté, végétation sculpturale. L'ancien couloir tunnel devient un espace de vie à part entière.</p>
         <div class="before-after">
           <figure>
-            <img src="assets/projects/appartement-mitte/bureau-avant.jpg" alt="Couloir avant travaux" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/bureau-avant.jpg" alt="Couloir avant travaux" />
             <figcaption>Avant</figcaption>
           </figure>
           <figure>
-            <img src="assets/projects/appartement-mitte/bureau-apres.jpg" alt="Bureau et couloir après travaux avec claustra en verre strié" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/bureau-apres.jpg" alt="Bureau et couloir après travaux avec claustra en verre strié" />
             <figcaption>Après</figcaption>
           </figure>
         </div>
@@ -176,11 +137,11 @@
         <p>Palette monochrome : laine bouclée, lin lavé, parquet chevron. Rangements en chêne et verre strié exploitant les 3,20 m sous plafond, appliques murales à 2700K, ficus et toile abstraite.</p>
         <div class="before-after">
           <figure>
-            <img src="assets/projects/appartement-mitte/chambre-avant.jpg" alt="Chambre avant travaux" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/chambre-avant.jpg" alt="Chambre avant travaux" />
             <figcaption>Avant</figcaption>
           </figure>
           <figure>
-            <img src="assets/projects/appartement-mitte/chambre-apres.jpg" alt="Chambre après travaux, palette monochrome" />
+            <img loading="lazy" src="assets/projects/appartement-mitte/chambre-apres.jpg" alt="Chambre après travaux, palette monochrome" />
             <figcaption>Après</figcaption>
           </figure>
         </div>
@@ -193,15 +154,15 @@
       <p style="max-width:70ch; color:var(--color-muted); margin-bottom: var(--space-md);">Le salon a été pensé pour épouser la course du soleil, exposition ouest : lumière froide et posée le matin, clarté douce en journée, embrasement chaleureux au coucher du soleil. Une même pièce, trois ambiances, la même attention aux matières et à la profondeur visuelle.</p>
       <div class="light-grid">
         <figure>
-          <img src="assets/projects/appartement-mitte/lumiere-matin.jpg" alt="Salon le matin, lumière froide" />
+          <img loading="lazy" src="assets/projects/appartement-mitte/lumiere-matin.jpg" alt="Salon le matin, lumière froide" />
           <figcaption>Matin</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/appartement-mitte/lumiere-jour.jpg" alt="Salon en journée, lumière douce" />
+          <img loading="lazy" src="assets/projects/appartement-mitte/lumiere-jour.jpg" alt="Salon en journée, lumière douce" />
           <figcaption>Journée</figcaption>
         </figure>
         <figure>
-          <img src="assets/projects/appartement-mitte/lumiere-soir.jpg" alt="Salon au coucher du soleil, lumière dorée" />
+          <img loading="lazy" src="assets/projects/appartement-mitte/lumiere-soir.jpg" alt="Salon au coucher du soleil, lumière dorée" />
           <figcaption>Soir</figcaption>
         </figure>
       </div>
