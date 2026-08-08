@@ -33,16 +33,44 @@ const navMobile = document.getElementById("nav-mobile");
 if (navToggle && navMobile) {
   navToggle.addEventListener("click", () => {
     const isOpen = navMobile.classList.toggle("is-open");
+    navToggle.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
   navMobile.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navMobile.classList.remove("is-open");
+      navToggle.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Ouvrir le menu");
       document.body.style.overflow = "";
     });
   });
+}
+
+/* ---------------------------------------------------------------
+   Active nav link tracking (highlights the section currently in view)
+--------------------------------------------------------------- */
+const trackedSections = document.querySelectorAll("main section[id]");
+const navDesktopLinks = document.querySelectorAll(".nav-desktop a[href^='#']");
+if (trackedSections.length && navDesktopLinks.length && "IntersectionObserver" in window) {
+  const linkBySectionId = new Map();
+  navDesktopLinks.forEach((link) => linkBySectionId.set(link.getAttribute("href").slice(1), link));
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const activeLink = linkBySectionId.get(entry.target.id);
+        if (!activeLink) return;
+        navDesktopLinks.forEach((link) => link.classList.remove("is-active"));
+        activeLink.classList.add("is-active");
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px" }
+  );
+  trackedSections.forEach((section) => sectionObserver.observe(section));
 }
 
 /* ---------------------------------------------------------------
