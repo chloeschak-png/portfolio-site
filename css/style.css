@@ -149,6 +149,7 @@ h1, h2, h3, h4 {
   font-size: clamp(1.9rem, 3.4vw, 2.6rem);
   margin-top: 0.3rem;
 }
+.section-head--tight { margin-bottom: 0.75rem; }
 
 .rule {
   border: none;
@@ -284,7 +285,7 @@ h1, h2, h3, h4 {
   padding-bottom: var(--space-lg);
 }
 .hero-title {
-  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
   max-width: 16ch;
   margin-top: 0.6rem;
 }
@@ -493,45 +494,6 @@ h1, h2, h3, h4 {
 .project-card--soon .project-card-title { color: var(--color-muted); font-weight: 500; }
 
 /* ==========================================================================
-   Process — horizontal frise (stacks to a vertical timeline on mobile)
-   ========================================================================== */
-.process-timeline {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
-  padding-top: var(--space-xs);
-}
-.process-track {
-  position: absolute;
-  top: 15px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--color-line);
-}
-.process-step { position: relative; }
-.process-marker {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--color-terracotta);
-  color: var(--color-cream);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.72rem;
-  margin-bottom: var(--space-sm);
-  flex-shrink: 0;
-}
-.process-step-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.3rem; }
-.process-step-text { font-size: 0.88rem; color: var(--color-muted); max-width: 24ch; }
-
-/* ==========================================================================
    About
    ========================================================================== */
 .about-grid {
@@ -553,12 +515,6 @@ h1, h2, h3, h4 {
   object-position: center 18%;
 }
 .about-text p { margin-bottom: var(--space-sm); font-size: 1.05rem; }
-.about-text .about-lead {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-  font-weight: 600;
-  line-height: 1.35;
-}
 
 /* ==========================================================================
    Parcours / timeline
@@ -757,9 +713,5 @@ h1, h2, h3, h4 {
   .hero-visual { aspect-ratio: 4 / 3; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .process-timeline { grid-template-columns: 1fr; gap: var(--space-lg); padding-top: 0; }
-  .process-track { top: 0; bottom: 0; left: 14px; right: auto; width: 1px; height: auto; }
-  .process-step { display: flex; align-items: flex-start; gap: var(--space-sm); }
-  .process-marker { margin-bottom: 0; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
 }
