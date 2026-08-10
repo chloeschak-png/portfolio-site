@@ -290,11 +290,11 @@ h1, h2, h3, h4 {
 }
 
 .hero-intro {
-  padding-top: var(--space-lg);
-  padding-bottom: var(--space-lg);
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
 }
 .hero-emoji {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
 }
 .hero-tagline {
