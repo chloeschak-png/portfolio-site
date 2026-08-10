@@ -294,11 +294,14 @@ h1, h2, h3, h4 {
   padding-bottom: var(--space-lg);
 }
 .hero-emoji {
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
 }
 .hero-tagline {
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
   color: var(--color-muted);
   margin-top: 0.5rem;
 }
