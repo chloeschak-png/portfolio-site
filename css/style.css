@@ -555,10 +555,10 @@ h1, h2, h3, h4 {
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   line-height: 1;
   color: var(--color-terracotta);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 /* ==========================================================================
@@ -566,10 +566,10 @@ h1, h2, h3, h4 {
    (moved out of per-page inline <style> blocks so project-01/02/etc. stay
    in sync instead of silently drifting from each other)
    ========================================================================== */
-.project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
-.project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
-.project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
-.project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
+.project-hero { padding-top: 7rem; padding-bottom: var(--space-md); }
+.project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-sm); }
+.project-hero-title { font-size: clamp(1.4rem, 3vw, 2.2rem); max-width: 20ch; font-weight: 600; }
+.project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-sm); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-sm) 0; margin-bottom: var(--space-md); }
 .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
 .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
 .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
@@ -593,6 +593,16 @@ h1, h2, h3, h4 {
 .light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
 .light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
 .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
+.plan-legend { list-style:none; margin: 0.9rem 0 0; padding:0; display:flex; flex-direction:column; gap:0.5rem; }
+.plan-legend li { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.86rem; color: var(--color-ink); }
+.plan-legend-dot { flex-shrink:0; width:11px; height:11px; border-radius:50%; margin-top:0.2rem; }
+.plan-legend-dot--dotted { background:none; border:1.5px dotted; }
+.plan-legend-mark { flex-shrink:0; width:11px; font-weight:700; font-size:0.9rem; line-height:1; letter-spacing:-1px; }
+.plan-scale { display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; font-size:0.78rem; color: var(--color-muted); }
+.plan-scale-bar { display:block; height:1px; background: var(--color-ink); position:relative; }
+.plan-scale-bar::before, .plan-scale-bar::after { content:""; position:absolute; top:-4px; width:1px; height:9px; background: var(--color-ink); }
+.plan-scale-bar::before { left:0; }
+.plan-scale-bar::after { right:0; }
 .room-block { margin-top: var(--space-xl); }
 .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
 .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
