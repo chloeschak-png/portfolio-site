@@ -568,7 +568,7 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
 .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
-.project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
+.project-hero-title { font-size: clamp(1.7rem, 4vw, 3rem); max-width: 20ch; font-weight: 600; }
 .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
 .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
 .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
@@ -597,6 +597,7 @@ h1, h2, h3, h4 {
 .plan-legend li { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.86rem; color: var(--color-ink); }
 .plan-legend-dot { flex-shrink:0; width:11px; height:11px; border-radius:50%; margin-top:0.2rem; }
 .plan-legend-dot--dotted { background:none; border:1.5px dotted; }
+.plan-legend-mark { flex-shrink:0; width:11px; font-weight:700; font-size:0.9rem; line-height:1; letter-spacing:-1px; }
 .plan-scale { display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; font-size:0.78rem; color: var(--color-muted); }
 .plan-scale-bar { display:block; height:1px; background: var(--color-ink); position:relative; }
 .plan-scale-bar::before, .plan-scale-bar::after { content:""; position:absolute; top:-4px; width:1px; height:9px; background: var(--color-ink); }
