@@ -597,6 +597,11 @@ h1, h2, h3, h4 {
 .plan-legend li { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.86rem; color: var(--color-ink); }
 .plan-legend-dot { flex-shrink:0; width:11px; height:11px; border-radius:50%; margin-top:0.2rem; }
 .plan-legend-dot--dotted { background:none; border:1.5px dotted; }
+.plan-scale { display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; font-size:0.78rem; color: var(--color-muted); }
+.plan-scale-bar { display:block; height:1px; background: var(--color-ink); position:relative; }
+.plan-scale-bar::before, .plan-scale-bar::after { content:""; position:absolute; top:-4px; width:1px; height:9px; background: var(--color-ink); }
+.plan-scale-bar::before { left:0; }
+.plan-scale-bar::after { right:0; }
 .room-block { margin-top: var(--space-xl); }
 .room-block h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
 .room-block p { max-width: 70ch; color: var(--color-muted); margin-bottom: var(--space-sm); }
