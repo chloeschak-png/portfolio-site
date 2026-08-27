@@ -553,7 +553,7 @@ h1, h2, h3, h4 {
    ========================================================================== */
 .project-hero { padding-top: 7rem; padding-bottom: var(--space-md); }
 .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-sm); }
-.project-hero-title { font-size: clamp(1.4rem, 3vw, 2.2rem); max-width: 20ch; font-weight: 600; }
+.project-hero-title { font-size: clamp(1.4rem, 3vw, 2.2rem); max-width: 32ch; font-weight: 600; }
 .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-sm); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-sm) 0; margin-bottom: var(--space-md); }
 .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
 .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
