@@ -296,7 +296,8 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 .hero-actions-wrap { margin-top: var(--space-lg); }
-.hero-tagline { font-size: 1.05rem; color: var(--color-muted); max-width: 46ch; margin-bottom: var(--space-md); }
+.hero-tagline-wrap { padding-top: var(--space-md); padding-bottom: var(--space-md); }
+.hero-tagline { font-size: 1.05rem; color: var(--color-muted); max-width: 46ch; }
 /* The header's logo sits at padding-left:var(--edge) from the viewport
    edge with no max-width centering (it's a fixed, full-width bar). The
    sitewide .wrap centers itself within --container first, which puts
