@@ -547,6 +547,7 @@ h1, h2, h3, h4 {
 .timeline-item--project .timeline-role { transition: color 0.2s var(--ease-out); }
 .timeline-item--project:hover .timeline-role { color: var(--color-terracotta-text); }
 .timeline-type--project { color: var(--color-terracotta-text); font-weight: 700; }
+.timeline-type--formation { color: #264f8f; font-weight: 700; }
 
 /* ==========================================================================
    Project case-study numeral (shared across project-0X.html pages)
