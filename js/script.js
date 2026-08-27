@@ -107,6 +107,17 @@ if (contactForm) {
 }
 
 /* ---------------------------------------------------------------
+   Services: clickable items expanding to show examples
+--------------------------------------------------------------- */
+document.querySelectorAll(".service-item-toggle").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.closest(".service-item");
+    const isOpen = item.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
+/* ---------------------------------------------------------------
    Scroll reveal via GSAP (graceful no-op if GSAP absent)
 --------------------------------------------------------------- */
 if (window.gsap && window.ScrollTrigger) {
