@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nom du projet · Chloé Schakowskoy</title>
-<meta name="description" content="Fiche projet, modèle à dupliquer pour chaque nouveau projet du portfolio." />
+<title>Home staging virtuel, ADEN Immobilien · Chloé Schakowskoy</title>
+<meta name="description" content="Home staging virtuel pour des biens résidentiels à Berlin, réalisé chez ADEN Immobilien : mise en scène de l'espace avant mise en ligne des annonces." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,21 +16,6 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/favicon/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<style>
-  .project-hero { padding-top: 9rem; padding-bottom: var(--space-lg); }
-  .project-hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-md); flex-wrap: wrap; margin-bottom: var(--space-lg); }
-  .project-hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); max-width: 20ch; font-weight: 600; }
-  .project-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-md); border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); padding: var(--space-md) 0; margin-bottom: var(--space-lg); }
-  .project-meta-grid .label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.4rem; }
-  .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
-  .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
-  .project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
-  .project-body p { margin-bottom: var(--space-sm); }
-  .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
-  .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
-  .project-gallery .placeholder-fill { aspect-ratio: 4/3; border-radius: var(--radius); background: var(--color-cream-deep); }
-  .project-nav { display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--color-line); padding-top: var(--space-md); margin-top: var(--space-2xl); }
-</style>
 </head>
 <body class="no-js">
 
@@ -43,6 +28,7 @@
   <nav class="nav-desktop" aria-label="Navigation principale">
     <a href="index.html#projets">Projets</a>
     <a href="index.html#apropos">À propos</a>
+    <a href="index.html#services">Services</a>
     <a href="index.html#parcours">Parcours</a>
     <a href="index.html#contact">Contact</a>
   </nav>
@@ -57,6 +43,7 @@
 <nav class="nav-mobile" id="nav-mobile" aria-label="Navigation mobile">
   <a href="index.html#projets">Projets</a>
   <a href="index.html#apropos">À propos</a>
+  <a href="index.html#services">Services</a>
   <a href="index.html#parcours">Parcours</a>
   <a href="index.html#contact">Contact</a>
 </nav>
@@ -65,55 +52,88 @@
   <section class="wrap project-hero">
     <div class="project-hero-top" data-reveal>
       <div>
-        <p class="eyebrow">Direction artistique, 2025</p>
-        <h1 class="project-hero-title">Nom du projet</h1>
+        <span class="project-index-num">03</span>
+        <p class="eyebrow">ADEN Immobilien · Home staging virtuel, 2025-2026</p>
+        <h1 class="project-hero-title">Home staging virtuel, ADEN Immobilien</h1>
       </div>
       <a href="index.html#projets" class="btn">← Tous les projets</a>
     </div>
 
     <div class="project-meta-grid" data-reveal>
       <div>
-        <div class="label">Client</div>
-        <div class="value">Nom du client</div>
-      </div>
-      <div>
         <div class="label">Lieu</div>
-        <div class="value">Ville, Pays</div>
+        <div class="value">Berlin</div>
       </div>
       <div>
-        <div class="label">Année</div>
-        <div class="value">2025</div>
+        <div class="label">Client</div>
+        <div class="value">ADEN Immobilien</div>
       </div>
       <div>
-        <div class="label">Rôle</div>
-        <div class="value">Conception &amp; suivi</div>
-      </div>
-      <div>
-        <div class="label">Surface</div>
-        <div class="value">XX m²</div>
+        <div class="label">Type</div>
+        <div class="value">Home staging virtuel, biens résidentiels</div>
       </div>
     </div>
 
-    <div class="project-cover placeholder-fill" data-reveal style="min-height:320px;">
-      Photo principale à venir
+    <div class="project-cover" data-reveal>
+      <img src="assets/services/home-staging/salon-01.jpg" alt="Salon lumineux avec oliviers en pot, home staging virtuel" />
     </div>
 
     <div class="project-body" data-reveal>
-      <p><strong>Le contexte.</strong> Décris ici la demande initiale du client : le lieu, les contraintes, l'intention de départ. Deux à trois phrases suffisent pour poser le décor.</p>
-      <p><strong>L'intention.</strong> Explique le parti pris créatif : quelle ambiance, quelles références, quels choix de matières ou de formes ont guidé le projet.</p>
-      <p><strong>Le résultat.</strong> Termine en présentant ce qui a été livré et l'effet recherché sur ceux qui vivent ou utilisent l'espace / l'objet.</p>
+      <p><strong>Le contexte.</strong> Chez ADEN Immobilien, où j'occupais un poste en gestion de projet et marketing digital, le home staging virtuel intervenait sur des biens vides ou à la décoration datée, avant la mise en ligne des annonces. L'objectif n'est pas décoratif mais commercial : aider un acheteur ou un locataire à se projeter dans un espace qu'il découvre d'abord en photo, avant même la visite.</p>
+      <p><strong>La démarche.</strong> Plutôt que de meubler une pièce pour qu'elle soit jolie, chaque mise en scène part des contraintes réelles du bien : orientation de la lumière, hauteur sous plafond, circulation, volumes difficiles à lire sur les photos d'annonce. Le mobilier choisi vient répondre à ces contraintes plutôt que les masquer, pièce par pièce.</p>
+      <p><strong>Le résultat.</strong> Une palette claire et neutre reste constante d'un bien à l'autre, pour que l'attention reste sur l'architecture existante plutôt que sur le décor rapporté. L'échelle du mobilier respecte les proportions réelles de chaque pièce, plutôt que de chercher à la remplir.</p>
     </div>
 
-    <div class="project-gallery" data-reveal>
-      <div class="placeholder-fill">Photo 02</div>
-      <div class="placeholder-fill">Photo 03</div>
-      <div class="placeholder-fill">Photo 04</div>
-      <div class="placeholder-fill">Photo 05</div>
+    <div class="section-block" data-reveal>
+      <span class="eyebrow">Sélection</span>
+      <h2>Biens mis en scène</h2>
+      <div class="staging-grid">
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/salon-02.jpg" alt="Salon avec cheminée, home staging virtuel" />
+          <figcaption><strong>Salon, cheminée</strong>Meuble bas et lampe de faible hauteur pour ne pas concurrencer la hauteur sous plafond ; les compositions murales occupent le mur nu au-dessus de la cheminée, qui casse sinon la lecture du volume.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/chambre-01.jpg" alt="Chambre avec tapis, home staging virtuel" />
+          <figcaption><strong>Chambre, parquet à chevrons</strong>Un tapis à motif dense ancre le lit au sol dans une pièce très lumineuse, où un mobilier trop clair aurait disparu contre les murs blancs.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/salon-01.jpg" alt="Salon lumineux avec oliviers en pot, home staging virtuel" />
+          <figcaption><strong>Salon, plafond haut</strong>Les oliviers en pot guident le regard vers les fenêtres plutôt que de les masquer ; le canapé modulaire clair laisse respirer un volume sous plafond haut.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/chambre-02.jpg" alt="Chambre avec mur de cadres, home staging virtuel" />
+          <figcaption><strong>Chambre, mur de cadres</strong>Un mur de cadres occupe la hauteur d'une pièce autrement nue, sans ajouter de mobilier au sol dans une chambre à la surface contrainte.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/dressing-01.jpg" alt="Dressing sous combles, home staging virtuel" />
+          <figcaption><strong>Dressing, sous combles</strong>Le rangement est placé côté haut de la pente de toit, pour garder la circulation dégagée sous la partie basse, difficilement exploitable autrement.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/balcon-01.jpg" alt="Balcon aménagé, home staging virtuel" />
+          <figcaption><strong>Balcon</strong>Une assise simple suffit à démontrer qu'un balcon étroit reste un espace de vie utilisable, argument de vente souvent sous-estimé sur les annonces.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/salon-03.jpg" alt="Salon avec canapé vert, home staging virtuel" />
+          <figcaption><strong>Salon, canapé courbe</strong>Une seule couleur saturée suffit à structurer un salon aux murs autrement nus ; le grand miroir posé au sol prolonge la profondeur de la pièce plutôt que de la meubler davantage.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/salon-04.jpg" alt="Salon avec canapé blanc et moulures d'origine, home staging virtuel" />
+          <figcaption><strong>Salon, moulures d'origine</strong>Le canapé courbe blanc laisse le passage vers la salle à manger dégagé ; un seul jeté de couleur suffit à réchauffer une pièce dont les moulures sont déjà très présentes.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/chambre-03.jpg" alt="Chambre d'enfant, home staging virtuel" />
+          <figcaption><strong>Chambre d'enfant</strong>Le mobilier reste sobre, en blanc et laiton, pour que les jouets et les couleurs de l'enfant restent la note dominante plutôt que d'être noyés dans le décor.</figcaption>
+        </figure>
+        <figure>
+          <img loading="lazy" src="assets/services/home-staging/sejour-01.jpg" alt="Séjour sous charpente avec coin repas, home staging virtuel" />
+          <figcaption><strong>Séjour, sous charpente</strong>Dans un volume unique sous charpente apparente, table à manger et canapé sont répartis de part et d'autre du poteau central, qui devient un repère spatial plutôt qu'un obstacle à contourner.</figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="project-nav" data-reveal>
       <a href="project-02.html" class="link-arrow">&larr; Projet précédent</a>
-      <a href="project-04.html" class="btn btn--solid">Projet suivant &rarr;</a>
+      <a href="index.html#projets" class="btn btn--solid">Tous les projets &rarr;</a>
     </div>
   </section>
 </main>

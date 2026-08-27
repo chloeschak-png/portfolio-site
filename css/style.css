@@ -582,6 +582,11 @@ h1, h2, h3, h4 {
 .light-grid img { width:100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
 .light-grid figcaption { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color: var(--color-muted); margin-top:0.5rem; }
 .plans-grid figcaption { font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color: var(--color-muted); margin-top:0.6rem; }
+.staging-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+.staging-grid figure { margin: 0; }
+.staging-grid img { width: 100%; border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover; }
+.staging-grid figcaption { font-size: 0.84rem; color: var(--color-muted); margin-top: 0.6rem; line-height: 1.45; }
+.staging-grid figcaption strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink); margin-bottom: 0.35rem; }
 .plan-legend { list-style:none; margin: 0.9rem 0 0; padding:0; display:flex; flex-direction:column; gap:0.5rem; }
 .plan-legend li { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.86rem; color: var(--color-ink); }
 .plan-legend-dot { flex-shrink:0; width:11px; height:11px; border-radius:50%; margin-top:0.2rem; }
@@ -616,7 +621,7 @@ h1, h2, h3, h4 {
 .moodboard-collage .item-feature { grid-column: span 2; grid-row: span 2; }
 .moodboard-collage .item-tall { grid-column: span 1; grid-row: span 2; }
 @media (max-width: 640px) {
-  .plans-grid, .before-after, .light-grid { grid-template-columns: 1fr; }
+  .plans-grid, .before-after, .light-grid, .staging-grid { grid-template-columns: 1fr; }
   .swatch-grid { grid-template-columns: repeat(3, 1fr); }
   .moodboard-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 110px; }
 }
