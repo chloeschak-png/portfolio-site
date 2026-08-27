@@ -140,3 +140,40 @@ if (window.gsap && window.ScrollTrigger) {
 } else {
   document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
 }
+
+/* ---------------------------------------------------------------
+   Lightbox for staging photos
+--------------------------------------------------------------- */
+const stagingImages = document.querySelectorAll(".staging-grid img");
+if (stagingImages.length) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Fermer l'image">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  `;
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-locked");
+  };
+
+  stagingImages.forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add("is-open");
+      document.body.classList.add("lightbox-locked");
+    });
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+}

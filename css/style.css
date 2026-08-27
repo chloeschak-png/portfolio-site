@@ -563,7 +563,7 @@ h1, h2, h3, h4 {
 .project-meta-grid .value { font-family: var(--font-display); font-weight: 500; }
 .project-cover { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; background: var(--color-cream-deep); }
 .project-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.project-body { max-width: 70ch; margin: var(--space-lg) auto 0; font-size: 1.1rem; }
+.project-body { max-width: 70ch; margin: var(--space-lg) 0 0; font-size: 1.1rem; }
 .project-body p { margin-bottom: var(--space-sm); }
 .project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-top: var(--space-lg); }
 .placeholder-fill { display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:500; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; text-align:center; color: rgba(28,27,31,0.35); }
@@ -719,6 +719,36 @@ h1, h2, h3, h4 {
 .service-item-detail { overflow: hidden; max-height: 0; transition: max-height 0.3s var(--ease-out); }
 .service-item-detail p { padding: 0 0 0.7rem; margin: 0; font-size: 0.86rem; color: var(--color-muted); }
 .service-item.is-open .service-item-detail { max-height: 200px; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(28, 27, 31, 0.92);
+  z-index: 200;
+  padding: var(--space-lg);
+}
+.lightbox.is-open { display: flex; }
+.lightbox-img { max-width: 100%; max-height: 100%; border-radius: var(--radius); object-fit: contain; cursor: zoom-out; }
+.lightbox-close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(251, 249, 244, 0.12);
+  color: var(--color-cream);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s var(--ease-out);
+}
+.lightbox-close:hover { background: rgba(251, 249, 244, 0.24); }
+body.lightbox-locked { overflow: hidden; }
 
 @media (max-width: 900px) {
   .nav-desktop, .nav-cta .btn { display: none; }
