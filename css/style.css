@@ -298,6 +298,8 @@ h1, h2, h3, h4 {
 .hero-actions-wrap { margin-top: var(--space-lg); }
 .hero-tagline-wrap { padding-top: var(--space-md); padding-bottom: var(--space-md); }
 .hero-tagline { font-size: 1.05rem; color: var(--color-muted); max-width: 46ch; }
+.hero-tagline strong { color: var(--color-ink); font-weight: 600; }
+.hero-emoji { font-size: 0.95rem; letter-spacing: 0.08em; margin-top: 0.5rem; }
 /* The header's logo sits at padding-left:var(--edge) from the viewport
    edge with no max-width centering (it's a fixed, full-width bar). The
    sitewide .wrap centers itself within --container first, which puts
