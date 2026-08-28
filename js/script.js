@@ -142,9 +142,9 @@ if (window.gsap && window.ScrollTrigger) {
 }
 
 /* ---------------------------------------------------------------
-   Lightbox for staging photos
+   Lightbox for project photos (plans, before/after, staging, light study)
 --------------------------------------------------------------- */
-const stagingImages = document.querySelectorAll(".staging-grid img");
+const stagingImages = document.querySelectorAll(".staging-grid img, .plans-grid img, .before-after img, .light-grid img, .room-block img");
 if (stagingImages.length) {
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
