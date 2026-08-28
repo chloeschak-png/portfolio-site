@@ -140,3 +140,66 @@ if (window.gsap && window.ScrollTrigger) {
 } else {
   document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
 }
+
+/* ---------------------------------------------------------------
+   Lightbox for staging photos
+--------------------------------------------------------------- */
+const stagingImages = document.querySelectorAll(".staging-grid img");
+if (stagingImages.length) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Photo agrandie");
+  lightbox.innerHTML = `
+    <button class="lightbox-close" aria-label="Fermer l'image">&times;</button>
+    <img class="lightbox-img" src="" alt="" />
+  `;
+  document.body.appendChild(lightbox);
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+  const lightboxClose = lightbox.querySelector(".lightbox-close");
+  let lastFocused = null;
+
+  const openLightbox = (img) => {
+    lastFocused = document.activeElement;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("is-open");
+    document.body.classList.add("lightbox-locked");
+    lightboxClose.focus();
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("is-open");
+    document.body.classList.remove("lightbox-locked");
+    if (lastFocused) lastFocused.focus();
+  };
+
+  stagingImages.forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.setAttribute("tabindex", "0");
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", `Agrandir : ${img.alt}`);
+    img.addEventListener("click", () => openLightbox(img));
+    img.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(img);
+      }
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("is-open")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "Tab") {
+      // Only the close button is focusable inside the dialog; keep focus trapped on it.
+      e.preventDefault();
+      lightboxClose.focus();
+    }
+  });
+}
