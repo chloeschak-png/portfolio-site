@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   position: relative;
   padding: 0.3rem 0;
-  color: var(--color-muted);
+  color: var(--color-ink);
   transition: color 0.2s var(--ease-out);
 }
 .nav-desktop a:hover { color: var(--color-ink); }
