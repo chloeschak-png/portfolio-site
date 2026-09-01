@@ -318,7 +318,7 @@ h1, h2, h3, h4 {
      rounding discrepancy to worry about. */
   width: 100%;
   margin: 0 0 var(--space-lg);
-  aspect-ratio: 1920 / 1445;
+  aspect-ratio: 1600 / 750;
   overflow: hidden;
   background: var(--color-cream-deep);
 }
@@ -754,7 +754,7 @@ body.lightbox-locked { overflow: hidden; }
 @media (max-width: 900px) {
   .nav-desktop, .nav-cta .btn { display: none; }
   .nav-toggle { display: flex; }
-  .hero-visual { aspect-ratio: 1920 / 1445; }
+  .hero-visual { aspect-ratio: 1600 / 750; }
   .about-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
