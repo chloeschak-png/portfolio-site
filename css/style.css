@@ -720,6 +720,15 @@ h1, h2, h3, h4 {
 .service-item-detail { overflow: hidden; max-height: 0; transition: max-height 0.3s var(--ease-out); }
 .service-item-detail p { padding: 0 0 0.7rem; margin: 0; font-size: 0.86rem; color: var(--color-muted); }
 .service-item.is-open .service-item-detail { max-height: 200px; }
+.service-item--media .service-item-detail p { padding-bottom: 1rem; }
+.service-item--media.is-open .service-item-detail { max-height: 3200px; }
+.service-item-video-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; padding-bottom: 1rem; }
+.service-item-video-grid figure { margin: 0; }
+.service-item-video-grid video { width: 100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 4px; background: var(--color-cream-deep); display: block; }
+.service-item-video-grid figcaption { font-size: 0.7rem; color: var(--color-muted); margin-top: 0.4rem; line-height: 1.3; }
+@media (max-width: 640px) {
+  .service-item-video-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 .lightbox {
   position: fixed;
