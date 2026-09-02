@@ -91,7 +91,8 @@ filterButtons.forEach((btn) => {
 });
 
 /* ---------------------------------------------------------------
-   Contact form -> mailto fallback (no backend on a static site)
+   Contact form -> opens Gmail compose in a new tab (no backend on
+   a static site; avoids relying on a configured native mail app)
 --------------------------------------------------------------- */
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
@@ -102,7 +103,8 @@ if (contactForm) {
     const message = encodeURIComponent(document.getElementById("message").value);
     const subject = encodeURIComponent(`Contact portfolio de ${decodeURIComponent(name)}`);
     const body = encodeURIComponent(`De : ${decodeURIComponent(name)} (${email})\n\n${decodeURIComponent(message)}`);
-    window.location.href = `mailto:chloe.schakowskoy@gmail.com?subject=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=chloe.schakowskoy@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
   });
 }
 
